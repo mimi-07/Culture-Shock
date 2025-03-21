@@ -1,0 +1,65 @@
+.P1 .text{
+    justify-content: center;
+    align-items: center;
+    font-family: Assistant, sans-serif;
+    font-style: normal;
+    margin: 10px 23vw;
+    color: black;
+}
+.P1 .text .title{
+    font-size: 30px;
+    padding: 20px 0;
+    font-weight: 400;
+    text-align: center;
+}
+.P1 h1{
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.P1 h2{
+    padding: 10px 0;
+    font-size: 19px;
+    font-weight: 400;
+}
+.P1 p{
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+}
+.P1 h4{
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+}
+@media (max-width: 600px) {
+    .P1 .text{
+        margin: 10px 20px;
+    }
+}
+
+
+.P1 table tr th{
+    border: #555 1px solid;
+    padding: 10px 15px; 
+    margin: 0;
+    table-layout: fixed;
+    color: #555;
+}
+.P1 table {
+    border-collapse: collapse;
+  }
+.P1 table tr:first-child th{
+    font-weight: 700;
+}
+.P1 table tr:nth-child(2) th{
+    font-weight: 300;
+    text-align: left;
+
+}
+.P1 table tr:nth-child(2) th ol {
+    list-style-type: circle;
+    list-style-position: inside;
+}
