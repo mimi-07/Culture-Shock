@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './login:register.css'
-import axios from 'axios';
+
 
 // menu
 function showSidebar(){
@@ -42,7 +42,7 @@ function Contact({ sendHelpMessage }) {
   
   const handleLogout = () => {
     localStorage.removeItem("shopifyCustomerId"); // Remove stored customer ID
-    window.location.href = "/"; // Redirect to login page
+    window.location.href = "#/"; // Redirect to login page
   };
 
   
@@ -67,9 +67,9 @@ function Contact({ sendHelpMessage }) {
   return (
     <div className='P3'>
 
-      <div className='container'>
+      <div className='container' style={{display:"grid"}}>
         <div className="navbar_1">
-          <a href="/" class="logo">
+          <a href="/#/" class="logo">
             <ul>
               <li><img src="images/logo.png"/></li>
             </ul>
@@ -78,7 +78,7 @@ function Contact({ sendHelpMessage }) {
                         
             <ul>
               {!localStorage.getItem("shopifyCustomerId") ? (
-                  <li><a href="/login" className="user"><i className='bx bx-user'></i></a></li>
+                  <li><a href="/#/login" className="user"><i className='bx bx-user'></i></a></li>
               ) : (
                   <li><a onClick={showAdminbar} className="admin"><i className='bx bxs-user-circle'></i></a></li>
               )}
@@ -94,25 +94,25 @@ function Contact({ sendHelpMessage }) {
            
             <ul>
               <div id="mobile_2">
-                <li><a href="#" onClick={hideSidebar}><i class='bx bx-x'></i></a></li>
+                <li><a onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
               </div>    
-              <li><a href="/">HOME</a></li>
-              <li><a href="/shop">SHOP</a></li>
-              <li><a href="/about">ABOUT</a></li>
-              <li><a href="/contact">CONTACT</a></li>
+              <li><a href="#/" >HOME</a></li>
+              <li><a href="#/shop" >SHOP</a></li>
+              <li><a href="#/about" >ABOUT</a></li>
+              <li><a href="#/contact" >CONTACT</a></li>
             </ul>
           </nav>
         </div>
-
+        
         <div id="navbar_3">
           <nav className="menu_1">
             <ul>
                 <div id="mobile_2">
-                  <li><a href="#" onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
+                  <li><a onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
                 </div>    
-                <li><a href={`/admin/${localStorage.getItem("shopifyCustomerId")}`}>Profile</a></li>
-                <li><a href={`/orders/${localStorage.getItem("shopifyCustomerId")}`}>Orders</a></li>
-                <li><a href={`/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
+                <li><a href="https://shopify.com/90358743415/account/profile">Profile</a></li>
+                <li><a href="https://shopify.com/90358743415/account/orders">Orders</a></li>
+                <li><a href={`#/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
                 <li><a onClick={handleLogout}>Log out</a></li>
             </ul>
           </nav>
@@ -172,7 +172,7 @@ function Contact({ sendHelpMessage }) {
           </div>
           <div class="socials">
             <a href='https://www.instagram.com/culture.shock.clothing/'><i href='https://www.instagram.com/culture.shock.clothing/' class='bx bxl-instagram'></i></a>
-            <a href='https://cltrshck.myshopify.com/'><i class='bx bxl-shopify'></i></a>
+            <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
           </div>
         </section>
 
@@ -183,25 +183,25 @@ function Contact({ sendHelpMessage }) {
             </div>
             <h4>Contact</h4>
             <p><strong>Address:</strong> Dunham Rd, Cheshire, Altrincham WA14 4AH</p>
-            <p><strong>Phone:</strong> 0000 0000 0000</p>
+            <p><strong>Phone:</strong>07889799082</p>
             <h4>Follow Us</h4>
             <div class="socials">
               <a href='https://www.instagram.com/culture.shock.clothing/'><i class='bx bxl-instagram'></i></a>
-              <a href='https://cltrshck.myshopify.com/'><i class='bx bxl-shopify'></i></a>
+              <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
             </div>
           </div>
 
           <div class="col">
             <h4>About</h4>
-            <a href="/about">About Us</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/contact">Contact Us</a>
+            <a href="#/about">About Us</a>
+            <a href="#/privacy">Privacy Policy</a>
+            <a href="#/contact">Contact Us</a>
           </div>
 
           <div className="col">
             <h4>My Account</h4>
-            <a href="/login">Sign In</a>
-            <a href="/contact">Help</a>
+            <a href="#/login">Sign In</a>
+            <a href="#/contact">Help</a>
           </div>
 
           <div className="col">
@@ -212,6 +212,7 @@ function Contact({ sendHelpMessage }) {
             <p>© Copyright 2024 HTML.am</p>
           </div>
         </footer>
+        
         <div className="spline-container">
           <spline-viewer url="https://prod.spline.design/WW56WhjGwg7hmUVs/scene.splinecode"></spline-viewer>
         </div>

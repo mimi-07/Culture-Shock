@@ -49,7 +49,7 @@ const Login = ({ sendVerificationCode }) => {
       <div className="container">
         {/* Navbar */}
         <div className="navbar_1">
-          <a href="/" className="logo">
+          <a href="#/" className="logo">
             <ul>
               <li>
                 <img src="images/logo.png" alt="Logo" />
@@ -59,7 +59,7 @@ const Login = ({ sendVerificationCode }) => {
           <nav className="icons">
             <ul>
               <li>
-                <a href="/login" className="user">
+                <a href="#/login" className="user">
                   <i className="bx bx-user"></i>
                 </a>
               </li>
@@ -76,12 +76,12 @@ const Login = ({ sendVerificationCode }) => {
           <nav className="menu_1">
             <ul>
               <div id="mobile_2">
-                <li><a href="#" onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
+                <li><a onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
               </div>
-              <li><a href="/">HOME</a></li>
-              <li><a href="/shop">SHOP</a></li>
-              <li><a href="/about">ABOUT</a></li>
-              <li><a href="/contact">CONTACT</a></li>
+              <li><a href="#/">HOME</a></li>
+              <li><a href="#/shop">SHOP</a></li>
+              <li><a href="#/about">ABOUT</a></li>
+              <li><a href="#/contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -126,7 +126,7 @@ const Login = ({ sendVerificationCode }) => {
                 <div className="register-link">
                   <p>
                     We'll send a verification code to your email<br />
-                    <a href="/privacy" style={{ textDecoration: "underline" }}>
+                    <a href="#/privacy" style={{ textDecoration: "underline" }}>
                       Privacy and Terms
                     </a>
                   </p>
@@ -139,37 +139,37 @@ const Login = ({ sendVerificationCode }) => {
         </section>
 
 
-        <footer className="section-p1">
+        <footer className="section-p1">     
           <div className="col">
             <div className="logo">
-              <img src="images/logo.png" width="55px" alt="" />
+              <img src="images/logo.png" width="55px" alt=""/>
             </div>
             <h4>Contact</h4>
             <p><strong>Address:</strong> Dunham Rd, Cheshire, Altrincham WA14 4AH</p>
-            <p><strong>Phone:</strong> 07889799082</p>
+            <p><strong>Phone:</strong> 07889799082 </p>
             <h4>Follow Us</h4>
             <div class="socials">
               <a href='https://www.instagram.com/culture.shock.clothing/'><i class='bx bxl-instagram'></i></a>
-              <a href='https://cltrshck.myshopify.com/'><i class='bx bxl-shopify'></i></a>
+              <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
             </div>
           </div>
 
-          <div className="col">
+          <div class="col">
             <h4>About</h4>
-            <a href="/about">About Us</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/contact">Contact Us</a>
+            <a href="#/about">About Us</a>
+            <a href="#/privacy">Privacy Policy</a>
+            <a href="#/contact">Contact Us</a>
           </div>
 
           <div className="col">
             <h4>My Account</h4>
-            <a href="/login">Sign In</a>
-            <a href="/contact">Help</a>
+            <a href="#/login">Sign In</a>
+            <a href="#/contact">Help</a>
           </div>
 
           <div className="col">
             <h4> Secure Payment Gateways</h4>
-            <img src="images/pay.png" alt="" width="260px" />
+            <img src="images/pay.png" alt="" width="260px"/>
           </div>
           <div className="copyright">
             <p>© Copyright 2024 HTML.am</p>

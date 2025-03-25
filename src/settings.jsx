@@ -30,12 +30,12 @@ function Settings() {
   const storedCustomerId = localStorage.getItem("shopifyCustomerId");
   if (!storedCustomerId || storedCustomerId !== customerId) {
     // ✅ If not logged in OR if the URL customerId doesn't match the stored ID, redirect to login
-    window.location.href = "/login";
+    window.location.href = "#/login";
     return;
   }
   const handleLogout = () => {
     localStorage.removeItem("shopifyCustomerId"); // Remove stored customer ID
-    window.location.href = "/"; // Redirect to login page
+    window.location.href = "#/"; // Redirect to login page
   };
   
   const handleLogoutEverywhere = async () => {
@@ -96,16 +96,16 @@ function Settings() {
 
       <div className='container'>
         <div className="navbar_1">
-          <a href="/" className="logo">
+          <a href="#/" className="logo">
             <ul>
-              <li><img src="/images/logo.png" alt="Logo" /></li>
+              <li><img src="/Culture-Shock/images/logo.png" alt="Logo" /></li>
             </ul>
           </a>
           <nav class="icons">
                         
             <ul>
               {!localStorage.getItem("shopifyCustomerId") ? (
-                  <li><a href="/login" className="user"><i className='bx bx-user'></i></a></li>
+                  <li><a href="#/login" className="user"><i className='bx bx-user'></i></a></li>
               ) : (
                   <li><a onClick={showAdminbar} className="admin"><i className='bx bxs-user-circle'></i></a></li>
               )}
@@ -121,12 +121,12 @@ function Settings() {
            
             <ul>
               <div id="mobile_2">
-                <li><a href="#" onClick={hideSidebar}><i class='bx bx-x'></i></a></li>
+                <li><a onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
               </div>    
-              <li><a href="/">HOME</a></li>
-              <li><a href="/shop">SHOP</a></li>
-              <li><a href="/about">ABOUT</a></li>
-              <li><a href="/contact">CONTACT</a></li>
+              <li><a href="#/">HOME</a></li>
+              <li><a href="#/shop">SHOP</a></li>
+              <li><a href="#/about">ABOUT</a></li>
+              <li><a href="#/contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -135,11 +135,11 @@ function Settings() {
           <nav className="menu_1">
             <ul>
                 <div id="mobile_2">
-                  <li><a href="#" onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
+                  <li><a onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
                 </div>    
                 <li><a href="https://shopify.com/90358743415/account/profile">Profile</a></li>
                 <li><a href="https://shopify.com/90358743415/account/orders">Orders</a></li>
-                <li><a href={`/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
+                <li><a href={`/#/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
                 <li><a onClick={handleLogout}>Log out</a></li>
             </ul>
           </nav>
@@ -165,22 +165,22 @@ function Settings() {
             <p><strong>Phone:</strong> 0000 0000 0000</p>
             <h4>Follow Us</h4>
             <div class="socials">
-              <i class='bx bxl-instagram'></i>
-              <i class='bx bxl-tiktok'></i>
+              <a href='https://www.instagram.com/culture.shock.clothing/'><i class='bx bxl-instagram'></i></a>
+              <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
             </div>
           </div>
 
           <div class="col">
             <h4>About</h4>
-            <a href="/about">About Us</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/contact">Contact Us</a>
+            <a href="#/about">About Us</a>
+            <a href="#/privacy">Privacy Policy</a>
+            <a href="#/contact">Contact Us</a>
           </div>
 
           <div className="col">
             <h4>My Account</h4>
-            <a href="/login">Sign In</a>
-            <a href="/contact">Help</a>
+            <a href="#/login">Sign In</a>
+            <a href="#/contact">Help</a>
           </div>
 
           <div className="col">

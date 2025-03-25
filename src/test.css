@@ -21,7 +21,9 @@
     animation-delay: 6.2s;
     animation-fill-mode: forwards;
 }
-
+.animation_bg_1::after{
+  display: none;
+}
 
 .animation_bg_2{
     position: fixed;

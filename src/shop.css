@@ -14,9 +14,7 @@
     align-items: center;
 }
 
-.product-list img{
-    width: calc(33.33333% - 30px);
-}
+
 .product-card:hover {
     transform: translateY(-2px);
 }
@@ -160,6 +158,8 @@
     color: black;
     text-decoration: none;
     display: none;
+    justify-self:left;
+    align-self: baseline;
 }
 .P2 .filter .LS br{
     display: none;
@@ -222,6 +222,9 @@
 }
 
 @media (max-width:600px) {
+    .product-card{
+        width: calc(50% - 30px);
+    }
     .P2 .Filter_btn{
         display: block;
     }

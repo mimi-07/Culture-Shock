@@ -36,10 +36,11 @@ const EmailVerification = ({sendVerificationCode }) => {
     console.log("Sending OTP verification request:", otp);
 
     try {
-        const response = await fetch("http://localhost:5002/verify-otp", {
+        const response = await fetch("https://culture-shock.onrender.com/verify-otp", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, otp, name }), // ✅ Send correct OTP
+            body: JSON.stringify({ email, otp, name }),
+            credentials: 'include', // ✅ Send correct OTP
         });
 
         const data = await response.json();
@@ -50,7 +51,7 @@ const EmailVerification = ({sendVerificationCode }) => {
             localStorage.setItem("shopifyCustomerId", data.customerId);
 
             // ✅ Redirect to home page
-            window.location.href = "/"; 
+            window.location.href = "#/"; 
         } else {
             alert(data.message || "Invalid OTP. Try again.");
         }

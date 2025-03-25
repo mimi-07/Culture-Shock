@@ -1,6 +1,7 @@
 import React, { StrictMode, useState, useEffect } from 'react';
+import ReactDOM from "react-dom/client";
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom"; 
+import { HashRouter as Router, Routes, Route} from "react-router-dom"; 
 import './index.css';
 import 'boxicons';
 
@@ -14,6 +15,7 @@ import EmailVerification from './EmailVerification';
 import Privacy from './privacy';
 import Settings from './settings.jsx';
 import NotFound from './notfound.jsx';
+import Shop from './shop.jsx'
 
 function Run() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -39,10 +41,11 @@ function Run() {
 
   const sendVerificationCode = async (name, email) => {
     try {
-      const response = await fetch('http://localhost:5002/verify-code', {
+      const response = await fetch('https://culture-shock.onrender.com/verify-code', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
+        credentials: 'include', 
       });
   
       if (!response.ok) {
@@ -64,10 +67,11 @@ function Run() {
   };
   const HelpRequest = async (name, email, message) => {
     try {
-      const response = await fetch('http://localhost:5002/send-message', {
+      const response = await fetch('https://culture-shock.onrender.com/send-message', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
+        credentials: 'include', 
       });
   
       if (!response.ok) {
@@ -90,21 +94,22 @@ function Run() {
   
   
 
-  return <Router> {/* ✅ Wrap everything in Router */}
-  <Routes>
-    <Route path="/" element={<ThemeProvider><App /></ThemeProvider>} />
-    <Route path="/login" element={<Login sendVerificationCode={sendVerificationCode} />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/privacy" element={<ThemeProvider><Privacy /></ThemeProvider>} />
-    <Route path="/contact" element={<Contact sendHelpMessage={HelpRequest}/>} />
-    <Route path="/settings/:customerId" element={<Settings />} />
-    <Route path="/verify" element={<EmailVerification sendVerificationCode={sendVerificationCode}/>} /> {/* ✅ Route for verification */}
-    <Route path="*" element={<NotFound/>} />
-  </Routes>
-</Router>;
+  return <Router>  {/* ✅ Wrap everything in Router */}
+    <Routes >
+      <Route path="/" element={<ThemeProvider><App /></ThemeProvider>} />
+      <Route path="/login" element={<Login sendVerificationCode={sendVerificationCode} />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/shop" element={<Shop/>} />
+      <Route path="/privacy" element={<ThemeProvider><Privacy /></ThemeProvider>} />
+      <Route path="/contact" element={<Contact sendHelpMessage={HelpRequest}/>} />
+      <Route path="/settings/:customerId" element={<Settings />} />
+      <Route path="/verify" element={<EmailVerification sendVerificationCode={sendVerificationCode}/>} /> {/* ✅ Route for verification */}
+      <Route path="*" element={<NotFound/>} />
+    </Routes>
+  </Router>;
 }
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Run />
   </StrictMode>

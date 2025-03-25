@@ -112,7 +112,7 @@ body{
   margin: 0;
   align-self: center;
   width:60%;
-  background: linear-gradient(to bottom,#0000003a,#0000003a), url(images/IMG_4003_430x.webp);
+  background: linear-gradient(to bottom,#0000003a,#0000003a), url(/images/IMG_4003_430x.webp);
   background-position: center; /* Left half on the left, right half on the right */
   background-size: cover;
   height: 90vh;
@@ -129,7 +129,7 @@ body{
   align-self: center;
   width:20%;
   height: 90vh;
-  background: url(images/IMG_55772.jpg);
+  background: url(/images/IMG_55772.jpg);
   background-size: cover;
 }
 .P1 .Home .wrapper .collection{
@@ -212,7 +212,8 @@ body{
   border-radius: 20px;
   height: 230px;
   border: 1px solid #FF7A7A;
-  overflow: hidden;
+  overflow: hidden !important;
+  display: grid;
 }
 .P1 .Home .wrapper .Explore .wrapper1{
   grid-row: 1;
@@ -256,17 +257,21 @@ body{
   transform: translateY(-3px);
   box-shadow: rgba(0, 0, 0, 0.14) 3px 3px 7px;
 }
+
 .P1 .Home .wrapper .Explore .wrapper3 .phone{
   position: relative;
   height: 300px;
   top: 37%;
   left: 50%;
   transform: translate(-50%,-50%);
+  align-self: center;
+  justify-self: center;
 }
+
 .P1 .Home .wrapper .Explore .phone {
   position: relative;
-  justify-self: center;
-  align-self: center;
+  left: 50%;
+  transform: translateX(-50%);
   top: 20%;
   border: 4px white solid;
   width: 150px;
@@ -290,10 +295,11 @@ body{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(images/jewellery.png);
+  background-image: url(/images/jewellery.png);
   background-size: cover;
   background-position: 40%;
   filter: drop-shadow( 6px 8px 9px rgba(0, 0, 0, 0.25));
+  
 }
 
 
@@ -301,30 +307,30 @@ body{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(images/tobag.png);
+  background-image: url(/images/tobag.png);
   background-size: cover;
   background-position: 40%;
   filter: drop-shadow( 6px 8px 9px rgba(0, 0, 0, 0.25));
 }
 .P1 .Home .wrapper .Explore .wrapper1 .phone{
-  background-image: url(images/girl-with-tablet_3579-5624.jpg);
+  background-image: url(/images/girl-with-tablet_3579-5624.jpg);
   background-size: cover;
   background-position: 40% ;
 }
 .P1 .Home .wrapper .Explore .wrapper2 .phone{
-  background-image: url(images/hoodies.jpg);
+  background-image: url(/images/hoodies.jpg);
   background-size: cover;
   background-position: 100% ;
 }
 .P1 .Home .wrapper .Explore .wrapper3 .phone{
-  background-image: url(images/home-images/240_F_191891230_LRAZDEd8EZuG1SPmLMWGZfgVTRMP2zyD.jpg);
+  background-image: url(/images/home-images/240_F_191891230_LRAZDEd8EZuG1SPmLMWGZfgVTRMP2zyD.jpg);
   background-size: cover;
   background-position: 48% ;
 }
 .P1 .Home .wrapper .Explore .wrapper4 h1{
   position: relative;
-  align-self: center;
-  justify-self: center;
+  text-align: center;
+  transform: translateY(15px);
   padding: 8px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: white;
@@ -335,8 +341,8 @@ body{
 
 .P1 .Home .wrapper .Explore .wrapper5 h1{
   position: relative;
-  align-self: center;
-  justify-self: center;
+  text-align: center;
+  transform: translateY(15px);
   padding: 8px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: white;

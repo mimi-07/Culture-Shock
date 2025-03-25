@@ -29,7 +29,7 @@ function Privacy() {
 
   const handleLogout = () => {
     localStorage.removeItem("shopifyCustomerId"); // Remove stored customer ID
-    window.location.href = "/"; // Redirect to login page
+    window.location.href = "#/"; // Redirect to login page
   };
   
   useEffect(() => {
@@ -52,7 +52,7 @@ function Privacy() {
 
       <div className='container'>
       <div className="navbar_1" style={darkMode ? {background:"rgba(0,0,0,40)",backdropFilter:"10px", boxShadow:"0 0 3px #fff, 0 0 30px #e60073, 0 0 40px #e60004"}:{}}>
-          <a href="/" className="logo">
+          <a href="#/" className="logo">
             <ul>
               <li><img src="images/logo.png"/></li>
             </ul>
@@ -62,7 +62,7 @@ function Privacy() {
             <ul>
               <ThemeButton/>
               {!localStorage.getItem("shopifyCustomerId") ? (
-                  <li><a href="/login" className="user"><i className='bx bx-user'></i></a></li>
+                  <li><a href="#/login" className="user"><i className='bx bx-user'></i></a></li>
               ) : (
                   <li><a onClick={showAdminbar} className="admin"><i className='bx bxs-user-circle'></i></a></li>
               )}
@@ -78,12 +78,12 @@ function Privacy() {
            
             <ul>
               <div id="mobile_2">
-                <li><a href="#" onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
+                <li><a onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
               </div>    
-              <li><a href="/" style={darkMode ? {color:"white"}:{color:"black"}}>HOME</a></li>
-              <li><a href="/shop" style={darkMode ? {color:"white"}:{color:"black"}}>SHOP</a></li>
-              <li><a href="/about" style={darkMode ? {color:"white"}:{color:"black"}}>ABOUT</a></li>
-              <li><a href="/contact" style={darkMode ? {color:"white"}:{color:"black"}}>CONTACT</a></li>
+              <li><a href="#/" style={darkMode ? {color:"white"}:{color:"black"}}>HOME</a></li>
+              <li><a href="#/shop" style={darkMode ? {color:"white"}:{color:"black"}}>SHOP</a></li>
+              <li><a href="#/about" style={darkMode ? {color:"white"}:{color:"black"}}>ABOUT</a></li>
+              <li><a href="#/contact" style={darkMode ? {color:"white"}:{color:"black"}}>CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -92,11 +92,11 @@ function Privacy() {
           <nav className="menu_1">
             <ul>
                 <div id="mobile_2">
-                  <li><a href="#" onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
+                  <li><a onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
                 </div>    
                 <li><a href="https://shopify.com/90358743415/account/profile">Profile</a></li>
                 <li><a href="https://shopify.com/90358743415/account/orders">Orders</a></li>
-                <li><a href={`/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
+                <li><a href={`/#/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
                 <li><a onClick={handleLogout}>Log out</a></li>
             </ul>
           </nav>
@@ -217,22 +217,22 @@ function Privacy() {
             <p><strong>Phone:</strong> 0000 0000 0000</p>
             <h4>Follow Us</h4>
             <div class="socials">
-              <i class='bx bxl-instagram'></i>
-              <i class='bx bxl-tiktok'></i>
+              <a href='https://www.instagram.com/culture.shock.clothing/'><i class='bx bxl-instagram'></i></a>
+              <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
             </div>
           </div>
 
           <div class="col" style={darkMode ? {color:"white"}:{}}>
             <h4>About</h4>
-            <a href="/about" style={darkMode ? {color:"white"}:{color:"black"}}>About Us</a>
-            <a href="/privacy" style={darkMode ? {color:"white"}:{color:"black"}}>Privacy Policy</a>
-            <a href="/contact" style={darkMode ? {color:"white"}:{color:"black"}}>Contact Us</a>
+            <a href="#/about" style={darkMode ? {color:"white"}:{color:"black"}}>About Us</a>
+            <a href="#/privacy" style={darkMode ? {color:"white"}:{color:"black"}}>Privacy Policy</a>
+            <a href="#/contact" style={darkMode ? {color:"white"}:{color:"black"}}>Contact Us</a>
           </div>
 
           <div className="col" style={darkMode ? {color:"white"}:{}}>
             <h4 >My Account</h4>
-            <a href="/login" style={darkMode ? {color:"white"}:{color:"black"}}>Sign In</a>
-            <a href="/contact" style={darkMode ? {color:"white"}:{color:"black"}}>Help</a>
+            <a href="#/login" style={darkMode ? {color:"white"}:{color:"black"}}>Sign In</a>
+            <a href="#/contact" style={darkMode ? {color:"white"}:{color:"black"}}>Help</a>
           </div>
 
           <div className="col" style={darkMode ? {color:"white"}:{}}>

@@ -56,7 +56,7 @@ const About = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("shopifyCustomerId"); // Remove stored customer ID
-    window.location.href = "/"; // Redirect to login page
+    window.location.href = "#/"; // Redirect to login page
   };
 
   const [isOnSecondPage, setIsOnSecondPage] = useState(false);
@@ -104,7 +104,7 @@ const About = () => {
       <div className='container'>
         {/* Navbar */}
         <div className="navbar_1">
-          <a href="/" className="logo">
+          <a href="#/" className="logo">
             <ul>
               <li><img src="images/logo.png" alt="Logo" /></li>
             </ul>
@@ -112,7 +112,7 @@ const About = () => {
           <nav className="icons">
             <ul>
               {!localStorage.getItem("shopifyCustomerId") ? (
-                  <li><a href="/login" className="user"><i className='bx bx-user'></i></a></li>
+                  <li><a href="#/login" className="user"><i className='bx bx-user'></i></a></li>
               ) : (
                   <li><a onClick={showAdminbar} className="admin"><i className='bx bxs-user-circle'></i></a></li>
               )}
@@ -128,12 +128,12 @@ const About = () => {
           <nav className="menu_1">
             <ul>
               <div id="mobile_2">
-                <li><a href="#" onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
+                <li><a onClick={hideSidebar}><i className='bx bx-x'></i></a></li>
               </div>
-              <li><a href="/">HOME</a></li>
-              <li><a href="/shop">SHOP</a></li>
-              <li><a href="/about">ABOUT</a></li>
-              <li><a href="/contact">CONTACT</a></li>
+              <li><a href="#/">HOME</a></li>
+              <li><a href="#/shop">SHOP</a></li>
+              <li><a href="#/about">ABOUT</a></li>
+              <li><a href="#/contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -142,11 +142,11 @@ const About = () => {
           <nav className="menu_1">
             <ul>
                 <div id="mobile_2">
-                  <li><a href="#" onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
+                  <li><a  onClick={hideAdminbar}><i class='bx bx-x'></i></a></li>
                 </div>    
                 <li><a href="https://shopify.com/90358743415/account/profile">Profile</a></li>
                 <li><a href="https://shopify.com/90358743415/account/orders">Orders</a></li>
-                <li><a href={`/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
+                <li><a href={`#/settings/${localStorage.getItem("shopifyCustomerId")}`}>Settings</a></li>
                 <li><a onClick={handleLogout}>Log out</a></li>
             </ul>
           </nav>
@@ -165,7 +165,7 @@ const About = () => {
               variants={Scroll2}
             id="img_1" src="images/fashion-woman-casual-hipster-summer-clothes_158538-7989.avif" alt="" />
           </div>
-          <video autoPlay loop muted>
+          <video autoPlay loop muted playsInline>
             <source src="images/istockphoto-512962704-640_adpp_is.mp4" type="video/mp4" />
           </video>
         </section>
@@ -225,7 +225,7 @@ const About = () => {
             initial="hidden"
             animate={control3}
           >
-            <button><a href="/shop" style={{ color: "white" }}>Shop Now</a></button>
+            <button><a href="#/shop" style={{ color: "white" }}>Shop Now</a></button>
           </motion.div>
         </section>
 
@@ -241,19 +241,19 @@ const About = () => {
             <h4>Follow Us</h4>
             <div class="socials">
               <a href='https://www.instagram.com/culture.shock.clothing/'><i class='bx bxl-instagram'></i></a>
-              <a href='https://cltrshck.myshopify.com/'><i class='bx bxl-shopify'></i></a>
+              <a href='https://h7h4c9-aj.myshopify.com/'><i class='bx bxl-shopify'></i></a>
             </div>
           </div>
           <div className="col">
             <h4>About</h4>
-            <a href="/about">About Us</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/contact">Contact Us</a>
+            <a href="#/about">About Us</a>
+            <a href="#/privacy">Privacy Policy</a>
+            <a href="#/contact">Contact Us</a>
           </div>
           <div className="col">
             <h4>My Account</h4>
-            <a href="/login">Sign In</a>
-            <a href="/contact">Help</a>
+            <a href="#/login">Sign In</a>
+            <a href="#/contact">Help</a>
           </div>
           <div className="col">
             <h4>Secure Payment Gateways</h4>

@@ -389,6 +389,9 @@ footer .copyright{
     text-align: center;
 
 }
+footer .socials a i{
+    font-size: 26px;
+}
 @media all and (max-width: 799px) {
     .news .form{
         width: 70%;
@@ -701,6 +704,7 @@ footer .copyright{
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-self: center;
+    align-self: center;
 }
 #contact #contact_left,#contact #contact_right{
     width: 100%;
@@ -893,6 +897,8 @@ footer .copyright{
         flex-direction: row;
         padding: 40px;
         gap: 80px;
+        justify-self: center;
+        align-self: center;
 
     }
     #contact #contact_left{
