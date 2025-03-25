@@ -4,20 +4,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config({ path: './backend/.env' });
-
-
 const app = express();
-const PORT = 5002;  // Backend port
-
-// CORS configuration
+const PORT = process.env.PORT || 5002;  // Backend port
 const corsOptions = {
-  origin: 'http://localhost:5173',  // Your frontend URL
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
+  origin: "https://cultureshockshopping.com", // ONLY allow your live website
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Preflight OPTIONS request
+app.options("*", cors(corsOptions)); 
 app.use(express.json());
 app.use(bodyParser.json());
 
@@ -56,7 +53,7 @@ app.post('/verify-code', async (req, res) => {
       text: `Hello ${name},\nYour verification code is: ${otp}`,
     });
 
-    console.log("Email sent successfully:", info);
+    
     res.json({ success: true, message: 'Code sent successfully!' });
   } catch (error) {
     console.error('Error sending OTP:', error);
